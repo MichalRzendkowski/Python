@@ -1,2 +1,1 @@
-# Python
-Python Zadania
+# Repozytorium z zadaniami z Pythona
