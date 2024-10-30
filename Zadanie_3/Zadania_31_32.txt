@@ -1,0 +1,32 @@
+3.1:
+  x = 2; y = 3;
+  if (x > y):
+      result = x;
+  else:
+    result = y;
+  TAK
+
+  for i in "axby": if ord(i) < 100: print (i)
+  NIE, po instrukcji 'for' potrzebna nowa linia
+
+  for i in "axby": print (ord(i) if ord(i) < 100 else i)
+  TAK
+
+3.2:
+  L = [3, 5, 4] ; L = L.sort()
+  Przypisanie do L wartości L.sort() skutkuje przypisaniem wartości None
+  
+  x, y = 1, 2, 3
+  Przypisujemy trzy wartości dwum zmiennym co skutkuje błędem
+  
+  X = 1, 2, 3 ; X[1] = 4
+  Zmienna X to tuple a nie list więc nie możemy zmienić wartości
+  
+  X = [1, 2, 3] ; X[3] = 4
+  Lista X ma rozmiar 3, więc nie ma indeksu o wartości 3
+  
+  X = "abc" ; X.append("d")
+  Metoda append() nie jest zdefiniowana dla stringów
+  
+  L = list(map(pow, range(8)))
+  Funkcja pow() pryjmuje dwa argumenty
