@@ -17,7 +17,9 @@ class RandomQueue:
         if self.is_empty():
             raise IndexError
         self.n -= 1
-        return self.items.pop(random.randint(0, self.n))
+        i = random.randint(0, self.n)
+        self.items[i], self.items[-1] = self.items[-1], self.items[i]
+        return self.items.pop()
 
     def is_empty(self):
         return self.n == 0
