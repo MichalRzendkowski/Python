@@ -3,7 +3,7 @@ class GameOfLife:
     def __init__(self, m, n):
         self.m = m
         self.n = n
-        self.matrix = [[False for i in range(m)] for i in range(n)]
+        self.matrix = [[False for i in range(m)] for j in range(n)]
 
     def setCell(self, x : int, y : int, value: bool):
         self.matrix[x][y] = value
@@ -29,9 +29,11 @@ class GameOfLife:
         count = 0
         for i in [-1, 0, 1]:
             for j in [-1, 0, 1]:
-                if self.getCellState(x + i, y + j) and not i == j == 0: count += 1
+                if self.getCellState(x + i, y + j) and not i == j == 0:
+                    count += 1
         return count
 
     def printMatrix(self):
         for i in range(self.n):
             print(self.matrix[i])
+
