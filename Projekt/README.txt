@@ -8,7 +8,7 @@ kwadratowych pól. Każda komórka może być "żywa" lub "martwa". W następnyc
 pokoleniach stan komórek zmienia się zgodnie z kilkoma zasadami:
 
 * Martwa komórka, która ma dokładnie 3 żywych sąsiadów,
-     staje się żywa w następnej jednostce czasu (rodzi się)
+     staje się żywa w następnej jednostce czasu ("rodzi się")
 * Żywa komórka z 2 albo 3 żywymi sąsiadami pozostaje nadal żywa;
      przy innej liczbie sąsiadów umiera (z „zatłoczenia”)
 
