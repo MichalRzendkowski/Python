@@ -25,9 +25,16 @@ W górnej częsci okna znajdują się przyciski (od lewej):
 * Do startu/pauzy automatycznej zmiany stanów.
 * Do przyspieszenia automatycznej zmiany stanów.
 * Do zwolnienia automatycznej zmiany stanów.
+* Do ustawienia losowej konfiguracji siatki.
 * Do zmiany wszystkich komórek na "martwe".
 
-===========================================================================
+============================================================================
+Moduły spoza biblioteki standardowej:
+
+tkmacosx - widget Button z tego modułu jest potrzebny do zmieniania koloru
+           przycisków w systemie macOS (https://pypi.org/project/tkmacosx/)
+
+============================================================================
 Implementacja:
 
 Program używa biblioteki tkinter do rysowania interfejsu.
