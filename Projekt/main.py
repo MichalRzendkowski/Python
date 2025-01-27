@@ -1,14 +1,16 @@
 from grid import Grid
 import tkinter as tk
 from tkmacosx import Button
-from threading import *
+from threading import Event
 from PIL import Image, ImageTk
 
 SIZE = 20
 
-if __name__ == '__main__':
+def path(i):
+    return f"images/btn_{i}.png"
 
-    images = [Image.open(f"images/btn_{i}.png").resize((30, 30)) for i in range(1, 7)]
+def main():
+    images = [Image.open(path(i)).resize((30, 30)) for i in range(1, 8)]
     play_event = Event()
 
     root = tk.Tk()
@@ -61,10 +63,16 @@ if __name__ == '__main__':
     btnMinus.configure(image=image)
 
     btnClear = Button(top, height=50, width=50, command=g.clear)
-    btnClear.grid(row=1, column=4, sticky="e")
+    btnClear.grid(row=1, column=5, sticky="e")
     image = ImageTk.PhotoImage(images[5])
     btnClear.image = image
     btnClear.configure(image=image)
+
+    btnRand = Button(top, height=50, width=50, command=g.setRandom)
+    btnRand.grid(row=1, column=4, sticky="e")
+    image = ImageTk.PhotoImage(images[6])
+    btnRand.image = image
+    btnRand.configure(image=image)
 
     root.grid_columnconfigure(0, weight=1)
     root.grid_columnconfigure(2, weight=1)
@@ -72,3 +80,6 @@ if __name__ == '__main__':
     root.rowconfigure(3, weight=1)
 
     root.mainloop()
+
+if __name__ == '__main__':
+    main()
